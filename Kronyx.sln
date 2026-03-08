@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KronyxEditor", "KronyxEditor\KronyxEditor.csproj", "{374C6CED-C02C-4C0C-8B37-F2D61AB52316}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "Engine\Engine.vcxproj", "{C2EAEB38-AD91-4323-B5FF-ABAB164D86DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2EAEB38-AD91-4323-B5FF-ABAB164D86DD}.Debug|x64.ActiveCfg = Debug|x64
+		{C2EAEB38-AD91-4323-B5FF-ABAB164D86DD}.Debug|x64.Build.0 = Debug|x64
+		{C2EAEB38-AD91-4323-B5FF-ABAB164D86DD}.Release|x64.ActiveCfg = Release|x64
+		{C2EAEB38-AD91-4323-B5FF-ABAB164D86DD}.Release|x64.Build.0 = Release|x64
+		{374C6CED-C02C-4C0C-8B37-F2D61AB52316}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{374C6CED-C02C-4C0C-8B37-F2D61AB52316}.Debug|x64.Build.0 = Debug|Any CPU
+		{374C6CED-C02C-4C0C-8B37-F2D61AB52316}.Release|x64.ActiveCfg = Release|Any CPU
+		{374C6CED-C02C-4C0C-8B37-F2D61AB52316}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1C7D4A6-D04D-4E59-AC1C-3FDC7E212306}
+	EndGlobalSection
+EndGlobal
