@@ -112,7 +112,7 @@ namespace KronyxEditor.GameProject
                 UndoRedo.Add(new UndoRedoAction(
                     () => _scenes.Insert(sceneIndex, x),
                     () => RemoveSceneInternal(x),
-                    $"Add {x.Name}"
+                    $"Remove {x.Name}"
                     ));
 
             }, x=> !x.IsActive); // only remove scene that is not active
