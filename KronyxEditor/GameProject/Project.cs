@@ -23,7 +23,7 @@ namespace KronyxEditor.GameProject
         [DataMember]
         public string Path { get; private set; }
 
-        public string FullPath => $@"{Path}{Name}\{Name}{Extension}";
+        public string FullPath => $"{Path}{Name}{Extension}";
 
         [DataMember(Name ="Scenes")]
         private ObservableCollection<Scene> _scenes = new ObservableCollection<Scene>(); 
@@ -51,8 +51,6 @@ namespace KronyxEditor.GameProject
         public ICommand RedoCommand { get; private set; }
         public ICommand AddSceneCommand { get; private set; }
         public ICommand RemoveSceneCommand { get; private set; }
-
-        public ICommand SaveCommand { get; private set; }
 
         private void AddSceneInternal(string sceneName)
         {
@@ -121,7 +119,6 @@ namespace KronyxEditor.GameProject
 
             UndoCommand = new RelayCommand<object>(x => UndoRedo.Undo());
             RedoCommand = new RelayCommand<object>(x => UndoRedo.Redo());
-            SaveCommand = new RelayCommand<object>(x => Save(this));
 
 
         }
