@@ -21,6 +21,13 @@ namespace KronyxEditor.Editors
         public WorldEditorView()
         {
             InitializeComponent();
+            Loaded += OnWorldEditorViewLoaded;
+            Focusable = true;
+        }
+        private void OnWorldEditorViewLoaded(object sender, RoutedEventArgs e)
+        {
+            Loaded -= OnWorldEditorViewLoaded;
+            Keyboard.Focus(this);
         }
     }
 }
