@@ -1,4 +1,5 @@
-﻿using KronyxEditor.GameProject;
+﻿using KronyxEditor.Components;
+using KronyxEditor.GameProject;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -24,6 +25,21 @@ namespace KronyxEditor.Editors
             InitializeComponent();
         }
 
+        private void OnAddGameEntity_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Button;
+            var vm = btn.DataContext as Scene; // parent scene
+            vm.AddGameEntityCommand.Execute(new GameEntity(vm) { Name = "Empty Game Entity"});
+        }
 
+        private void OnGameEntities_ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            GameEntityView.Instance.DataContext = null; // 선택된 엔티티가 변경될 때마다 DataContext를 먼저 null로 설정하여 이전 엔티티와의 바인딩을 끊음
+            if (e.AddedItems.Count > 0)
+            {
+                GameEntityView.Instance.DataContext = (sender as ListBox).SelectedItems[0];
+             
+            }
+        }
     }
 }

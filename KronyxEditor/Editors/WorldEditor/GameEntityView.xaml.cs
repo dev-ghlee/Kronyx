@@ -14,20 +14,16 @@ using System.Windows.Shapes;
 namespace KronyxEditor.Editors
 {
     /// <summary>
-    /// WorldEditorView.xaml에 대한 상호 작용 논리
+    /// GameEntityView.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class WorldEditorView : UserControl
+    public partial class GameEntityView : UserControl
     {
-        public WorldEditorView()
+        public static GameEntityView Instance { get; private set; }
+        public GameEntityView()
         {
             InitializeComponent();
-            Loaded += OnWorldEditorViewLoaded;
-            Focusable = true;
-        }
-        private void OnWorldEditorViewLoaded(object sender, RoutedEventArgs e)
-        {
-            Loaded -= OnWorldEditorViewLoaded;
-            Keyboard.Focus(this);
+            DataContext = null;
+            Instance = this;
         }
     }
 }
