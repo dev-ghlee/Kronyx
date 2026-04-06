@@ -1,0 +1,29 @@
+<UserControl x:Class="KronyxEditor.Docking.DockWorkspace"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <ContentControl x:Name="LayoutHost"/>
+        <Grid x:Name="DropOverlay" Visibility="Collapsed" IsHitTestVisible="False" Margin="12">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Row="1" Grid.Column="0" Margin="2" Background="#66007ACC" BorderBrush="#CC66B2FF" BorderThickness="1"/>
+            <Border Grid.Row="1" Grid.Column="2" Margin="2" Background="#66007ACC" BorderBrush="#CC66B2FF" BorderThickness="1"/>
+            <Border Grid.Row="0" Grid.Column="1" Margin="2" Background="#66007ACC" BorderBrush="#CC66B2FF" BorderThickness="1"/>
+            <Border Grid.Row="2" Grid.Column="1" Margin="2" Background="#66007ACC" BorderBrush="#CC66B2FF" BorderThickness="1"/>
+            <Border Grid.Row="1" Grid.Column="1" Margin="2" Background="#6646C37B" BorderBrush="#CC9BE8B4" BorderThickness="1"/>
+        </Grid>
+        <Border x:Name="PreviewOverlay" Visibility="Collapsed" BorderBrush="#FFFFC000" BorderThickness="2" Background="#33FFC000" Margin="0" IsHitTestVisible="False"/>
+    </Grid>
+</UserControl>
